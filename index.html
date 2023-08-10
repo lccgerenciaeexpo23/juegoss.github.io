@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página con Botones</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+    .contenedor {
+      text-align: center;
+    }
+    .boton {
+      margin: 10px;
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .boton-juegos {
+      background-color: #3498db;
+      color: white;
+    }
+    .boton-otro {
+      background-color: #e74c3c;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <h1>Bienvenido a la página con botones</h1>
+    
+    <a href="bombas.html" class="boton boton-juegos" onclick="redirigir('linkJuegos')">bombas</a>
+    
+    <a href="juego-agua.html" class="boton boton-otro" onclick="redirigir('linkOtro')">nadador</a>
+  </div>
+  
+  <script>
+    function redirigir(inputId) {
+      var enlace = document.getElementById(inputId).value;
+      if (enlace) {
+        window.location.href = enlace;
+      }
+    }
+  </script>
+</body>
+</html>
